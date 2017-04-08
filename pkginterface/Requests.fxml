@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="413.0" maxWidth="520.0" minHeight="413.0" minWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkginterface.RequestsController">
+   <children>
+      <Pane id="panel" layoutX="71.0" layoutY="51.0" prefHeight="311.0" prefWidth="378.0">
+         <children>
+            <TabPane layoutX="14.0" layoutY="45.0" prefHeight="218.0" prefWidth="351.0">
+               <tabs>
+                  <Tab fx:id="tab1" text="Basic Queries">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView id="list-view" fx:id="requete" layoutX="8.0" layoutY="8.0" prefHeight="174.0" prefWidth="338.0">
+                              <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                  <String fx:id="R1" fx:value="R1- Name of patients registered in the 'MAAF' &#10;health plan." />
+                                  <String fx:id="R2" fx:value="R2- Name of nurses working nights." />
+                                  <String fx:id="R3" fx:value="R3- For every service: its name, building, name &#10;and informations on its director (name &amp; speciality)." />
+                                  <String fx:id="R4" fx:value="R4- For every bed, in building 'B', which is assigned&#10;to a patient whose health plan starts like 'MN': the &#10;bed number, the room number, the service name &#10;and informations on the patient (name &amp; health plan)." />
+                                  <String fx:id="R5" fx:value="R5- The average of a nurse's salary for every service." />
+                                  <String fx:id="R6" fx:value="R6- For every service in buiding 'C': the average &#10;number of bed per room." />
+                                  <String fx:id="R7" fx:value="R7- For every patient who is in relation with more &#10;than 3 doctors: the total number of doctors he's &#10;in relation with and the corresponding number &#10;of specialities." />
+                                  <String fx:id="R8" fx:value="R8- For every service: the ratio between the number &#10;of nurses and the number of patients." />
+                                  <String fx:id="R9" fx:value="R9- Name of doctors who are in relation with at least &#10;one patient staying at the hospital." />
+                                  <String fx:id="R10" fx:value="R10- Name of doctors who are not in relation with &#10;any patient staying at the hospital." />
+                                  </FXCollections>
+                              </items>
+                              </ListView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tab2" text="Attributes display">
+                     <content>
+                        <AnchorPane prefHeight="162.0" prefWidth="351.0">
+                           <children>
+                              <AnchorPane layoutY="25.0" prefHeight="162.0" prefWidth="227.0">
+                                 <children>
+                                    <CheckBox fx:id="number" layoutX="14.0" layoutY="6.0" mnemonicParsing="false" text="ID" />
+                                    <CheckBox fx:id="nom" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" text="Last Name" />
+                                    <CheckBox fx:id="prenom" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" text="First Name" />
+                                    <CheckBox fx:id="adresse" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" text="Adress" />
+                                    <CheckBox fx:id="tel" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" text="Phone Number" />
+                                    <CheckBox fx:id="mut" layoutX="14.0" layoutY="122.0" mnemonicParsing="false" text="Health Plan" />
+                                    <CheckBox fx:id="spec" layoutX="14.0" layoutY="122.0" mnemonicParsing="false" text="Speciality" />
+                                    <CheckBox fx:id="servinf" layoutX="14.0" layoutY="122.0" mnemonicParsing="false" text="Service" />
+                                    <CheckBox fx:id="rotation" layoutX="138.0" layoutY="53.0" mnemonicParsing="false" text="Rotation" />
+                                    <CheckBox fx:id="salary" layoutX="138.0" layoutY="76.0" mnemonicParsing="false" text="Salary" />
+                                    <CheckBox fx:id="servicechambre" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" text="Service" />
+                                    <CheckBox fx:id="surveillant" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" text="Surveillant" />
+                                    <CheckBox fx:id="nblits" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" text="Number of beds" />
+                                    <CheckBox fx:id="batiment" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" text="Building" />
+                                    <CheckBox fx:id="directeur" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" text="Director" />
+                                 </children>
+                              </AnchorPane>
+                              <ComboBox id="combo" fx:id="table" layoutX="231.0" layoutY="41.0" onAction="#tablesel" prefHeight="25.0" prefWidth="107.0" promptText="Table name">
+                              <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="Patient" />
+                                  <String fx:value="Doctor" />
+                                  <String fx:value="Room" />
+                                  <String fx:value="Service" />
+                                  <String fx:value="Nurse" />
+                                </FXCollections>
+                              </items>
+                              </ComboBox>
+                              <Label layoutX="7.0" layoutY="6.0" text="Attributes" underline="true" />
+                              <ComboBox id="combo" fx:id="combo" layoutX="251.0" layoutY="94.0" prefHeight="25.0" prefWidth="68.0" promptText="Sort">
+                              <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="Ascending" />
+                                  <String fx:value="Descending" />
+                                </FXCollections>
+                              </items>
+                              </ComboBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <Label id="welcome-text" layoutX="5.0" layoutY="4.0" text="Database Queries" />
+            <Button layoutX="333.0" layoutY="273.0" mnemonicParsing="false" onAction="#getResults" text="Run">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button fx:id="backToMenu" layoutX="281.0" layoutY="9.0" mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
+            </children>
+      </Pane>
+   </children>
+</AnchorPane>

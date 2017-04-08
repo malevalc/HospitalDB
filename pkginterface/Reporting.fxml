@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="413.0" maxWidth="520.0" minHeight="413.0" minWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkginterface.ReportingController">
+   <children>
+      <Pane id="panel" layoutX="14.0" layoutY="26.0" prefHeight="362.0" prefWidth="492.0">
+         <children>
+            <Button layoutX="138.0" layoutY="55.0" mnemonicParsing="false" onAction="#pieAction" prefHeight="25.0" prefWidth="79.0" text="PieChart" />
+            <ScrollPane layoutX="21.0" layoutY="122.0" prefHeight="234.0" prefViewportHeight="290.0" prefViewportWidth="200.0" prefWidth="463.0">
+               <content>
+                  <AnchorPane fx:id="fenetre" prefHeight="1350.0" prefWidth="432.0">
+                     <children>
+                        <PieChart fx:id="pie1" layoutX="14.0" layoutY="14.0" prefHeight="418.0" prefWidth="418.0" />
+                        <PieChart fx:id="pie2" layoutX="14.0" layoutY="434.0" prefHeight="418.0" prefWidth="418.0" />
+                        <PieChart fx:id="pie3" layoutX="14.0" layoutY="854.0" prefHeight="418.0" prefWidth="418.0" />
+                        <BarChart fx:id="bar1" layoutX="14.0" layoutY="14.0" prefHeight="161.0" prefWidth="418.0">
+                          <xAxis>
+                            <CategoryAxis label="Service" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="Salaries (€)" lowerBound="0" tickUnit="1" upperBound="5" />
+                          </yAxis>
+                        </BarChart>
+                        <BarChart fx:id="bar2" layoutX="14.0" layoutY="175.0" prefHeight="161.0" prefWidth="418.0">
+                          <xAxis>
+                            <CategoryAxis label="Doctor" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="Patients" lowerBound="0" tickUnit="1" upperBound="5" />
+                          </yAxis>
+                        </BarChart>
+                        <BarChart fx:id="bar3" layoutX="14.0" layoutY="336.0" prefHeight="161.0" prefWidth="418.0">
+                          <xAxis>
+                            <CategoryAxis label="Supervisors" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="Rooms" lowerBound="0" tickUnit="1" upperBound="5" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label layoutX="217.0" layoutY="98.0" text="Result" />
+            <Button layoutX="43.0" layoutY="55.0" mnemonicParsing="false" onAction="#barAction" prefHeight="25.0" prefWidth="79.0" text="BarChart" />
+            <Label id="welcome-text" layoutX="4.0" layoutY="2.0" text="Database Reporting" />
+            <Button fx:id="backToMenu" layoutX="398.0" layoutY="4.0" mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
+            <Button id="refresh" layoutX="410.0" layoutY="55.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="32.0" text="↻" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

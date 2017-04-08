@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="413.0" maxWidth="520.0" minHeight="413.0" minWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkginterface.AResultsController">
+    <children>
+        <Pane id="panel" layoutX="17.0" layoutY="31.0" prefHeight="352.0" prefWidth="486.0">
+            <children>
+                <Label id="welcome-text" layoutX="7.0" layoutY="6.0" text="Query Result" />
+                <Button fx:id="backToMenu" layoutX="422.0" layoutY="11.0" mnemonicParsing="false" onAction="#backToRequests" text="⋘ Back" />
+                <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="363.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@request.jpg" />
+                    </image>
+                </ImageView>
+                <Button fx:id="backToMenu1" layoutX="205.0" layoutY="11.0" mnemonicParsing="false" onAction="#displayResults" text="Get Results" />
+                <TextArea fx:id="text" editable="false" layoutX="14.0" layoutY="71.0" prefHeight="275.0" prefWidth="467.0" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

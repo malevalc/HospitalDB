@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="413.0" maxWidth="520.0" minHeight="413.0" minWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkginterface.MajController">
+    <children>
+        <Pane id="panel" layoutX="66.0" layoutY="17.0" prefHeight="380.0" prefWidth="389.0">
+            <children>
+                <ComboBox id="combo" fx:id="table" layoutX="266.0" layoutY="64.0" onAction="#tablesel" prefHeight="25.0" prefWidth="114.0" promptText="Table name">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Patient" />
+                            <String fx:value="Doctor" />
+                            <String fx:value="Nurse" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button layoutX="334.0" layoutY="341.0" mnemonicParsing="false" onAction="#launch" text="Run">
+                    <effect>
+                        <Glow />
+                    </effect>
+                </Button>
+                <Label id="welcome-text" layoutX="5.0" layoutY="3.0" text="Database Update">
+                    <font>
+                        <Font name="Tahoma" size="27.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="add" layoutX="14.0" layoutY="54.0" mnemonicParsing="false" onAction="#addsel" text="Add element(s)">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="RadioGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="update" layoutX="56.0" layoutY="78.0" mnemonicParsing="false" onAction="#updsel" text="Update element(s)" toggleGroup="$RadioGroup" />
+                <RadioButton fx:id="delete" layoutX="125.0" layoutY="54.0" mnemonicParsing="false" onAction="#delsel" text="Delete element(s)" toggleGroup="$RadioGroup" />
+                <TextField id="text" fx:id="number" layoutX="173.0" layoutY="118.0" prefHeight="25.0" prefWidth="49.0" />
+                <TextField id="text" fx:id="nom" layoutX="15.0" layoutY="156.0" prefHeight="25.0" prefWidth="114.0" />
+                <TextField id="text" fx:id="prenom" layoutX="138.0" layoutY="156.0" prefHeight="25.0" prefWidth="119.0" />
+                <TextField id="text" fx:id="tel" layoutX="266.0" layoutY="156.0" prefHeight="25.0" prefWidth="114.0" />
+                <Button fx:id="backToMenu" layoutX="291.0" layoutY="8.0" mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
+                <Label layoutX="15.0" layoutY="207.0" text="Adress" />
+                <TextField id="text" fx:id="adresseligne" layoutX="15.0" layoutY="224.0" prefHeight="25.0" prefWidth="114.0" />
+                <TextField id="text" fx:id="adresseville" layoutX="141.0" layoutY="224.0" prefHeight="25.0" prefWidth="114.0" />
+                <TextField id="text" fx:id="adressecp" layoutX="273.0" layoutY="224.0" prefHeight="25.0" prefWidth="101.0" />
+                <ComboBox id="combo" fx:id="spe" layoutX="128.0" layoutY="289.0" prefHeight="25.0" prefWidth="140.0" promptText="Speciality">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Anesthetist" />
+                            <String fx:value="Cardiologist" />
+                            <String fx:value="Lung specialist" />
+                            <String fx:value="Orthopaedist" />
+                            <String fx:value="Radiologist" />
+                            <String fx:value="Traumatologist" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox id="combo" fx:id="mut" layoutX="141.0" layoutY="289.0" prefHeight="25.0" prefWidth="114.0" promptText="Health Plan">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="AG2R" />
+                            <String fx:value="CCVRP" />
+                            <String fx:value="CNAMTS" />
+                            <String fx:value="LMDE" />
+                            <String fx:value="MAAF" />
+                            <String fx:value="MAAS" />
+                            <String fx:value="MGEN" />
+                            <String fx:value="MGSP" />
+                            <String fx:value="MMA" />
+                            <String fx:value="MNAM" />
+                            <String fx:value="MNTFC" />
+                            <String fx:value="MNH" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox id="combo" fx:id="service" layoutX="15.0" layoutY="289.0" prefHeight="25.0" prefWidth="119.0" promptText="Service">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Cardiology" />
+                            <String fx:value="General Surgery" />
+                            <String fx:value="Reanimation and Traumatology" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox id="combo" fx:id="rotation" layoutX="154.0" layoutY="289.0" prefHeight="25.0" prefWidth="89.0" promptText="Rotation">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Day" />
+                            <String fx:value="Night" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <TextField id="text" fx:id="salaire" layoutX="270.0" layoutY="289.0" prefHeight="25.0" prefWidth="101.0" />
+                <Text fx:id="actiontarget" fill="#e40202" layoutX="148.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="174.19921875" />
+            <Label layoutX="290.0" layoutY="46.0" text="Table name" />
+            <Label fx:id="servicelbl" layoutX="14.0" layoutY="272.0" text="Service" />
+            <Label fx:id="salarylbl" layoutX="271.0" layoutY="272.0" text="Salary" />
+            <Label fx:id="rotlbl" layoutX="157.0" layoutY="272.0" text="Rotation" />
+            <Label fx:id="healthlbl" layoutX="141.0" layoutY="272.0" text="Health plan" />
+            <Label fx:id="speclbl" layoutX="125.0" layoutY="272.0" text="Speciality" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

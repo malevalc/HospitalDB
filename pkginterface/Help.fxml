@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="413.0" maxWidth="520.0" minHeight="413.0" minWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkginterface.HelpController">
+    <children>
+      <Pane id="panel" layoutX="50.0" layoutY="56.0" prefHeight="302.0" prefWidth="421.0">
+         <children>
+            <Label id="welcome-text" layoutX="4.0" layoutY="4.0" text="Help" />
+            <Button fx:id="backToMenu" layoutX="327.0" layoutY="8.0" mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu" />
+            <TextArea fx:id="help" editable="false" layoutX="7.0" layoutY="46.0" prefHeight="250.0" prefWidth="409.0" text="If you want to go through the application's windows, you only have to&#10;clic on the blue buttons.&#10;&#10;Follow the forms' instructions to get to the next screen.&#10;&#10;Update:&#10;Select if you want to add, update or delete elements. Make sure you &#10;have chosen a table in order to do that (the default table will be the &#10;patient table).&#10;You will then have the create new entries to the database, edit them&#10;or even delete them. &#10;&#10;Reporting:&#10;You can get some reports on the database. You can display these with &#10;piecharts and barcharts. Clic the refresh button to recompute the data &#10;when you have edited something.&#10;&#10;Query:&#10;You can have 2 choices :&#10;- chose a query and display the result on the next screen&#10;- chose attributes to display on the next screen &#10;  -&gt; Make sure you have chosen a type of sorting (default is ascending)&#10;" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
